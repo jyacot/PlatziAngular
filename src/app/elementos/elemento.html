@@ -1,0 +1,15 @@
+<div class="section">
+
+    <div class="container">
+        <div class="row">
+            <a routerLink="/crear_persona" class="button">Crear Persona</a>
+        </div>
+        <div class="row">
+            <ul>
+                <li *ngFor="let elemento of elementos">
+                    <a href="/{{ elemento.nombre }}"> {{ elemento.nombre.toUpperCase() }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="section">
+    <div class="containter is-fluid">
+        <div class="row">
+            <div class="field">
+                <div class="label">Nombre</div>
+                <div class="control">
+                    <input type="text" [(ngModel)]="formPersona.nombre">
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">Edad</div>
+                <div class="control">
+                    <input type="number" [(ngModel)]="formPersona.edad">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button class="button" (click)="addPersona()">Guardar</button>
+        </div>
+        <div class="row">
+            Personas en el sistema: <b>{{personas.length}}</b>
+        </div>
+        <code>{{ personas | json }}</code>
+    </div>
+</div>
