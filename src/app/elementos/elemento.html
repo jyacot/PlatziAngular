@@ -6,7 +6,9 @@
         </div>
         <div class="row">
             <ul>
-                <li *ngFor="let elemento of elementos">
+                <li *ngFor="let elemento of elementos | async; index as i; first as f">
+                    {{i}}
+                    {{elemento | json}}
                     <a href="/{{ elemento.nombre }}"> {{ elemento.nombre.toUpperCase() }}</a>
                 </li>
             </ul>
