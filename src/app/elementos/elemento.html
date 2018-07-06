@@ -13,5 +13,12 @@
                 </li>
             </ul>
         </div>
+        <div class="row">
+            <ul>
+                <li *ngFor="let e of fakes| async">
+                    {{e | json}}
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
