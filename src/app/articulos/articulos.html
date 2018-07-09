@@ -1,0 +1,26 @@
+<div class="section">
+    <div class="container">
+        <ul>
+            <li *ngFor="let articulo of articulos | async">
+                <!-- {{articulo | json}} -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">
+                            {{articulo.title | uppercase}}
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        {{articulo.body}}
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-footer-item">
+                            <a href="/#" class="button primary">
+                                {{articulo.id}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

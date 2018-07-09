@@ -7,18 +7,32 @@
         <div class="row">
             <ul>
                 <li *ngFor="let elemento of elementos | async; index as i; first as f">
-                    {{i}}
-                    {{elemento | json}}
                     <a href="/{{ elemento.nombre }}"> {{ elemento.nombre.toUpperCase() }}</a>
                 </li>
             </ul>
         </div>
         <div class="row">
             <ul>
-                <li *ngFor="let e of fakes| async">
-                    {{e | json}}
+                <li *ngFor="let e of fakes | async">
+                    {{e.name | json | uppercase}}
                 </li>
             </ul>
         </div>
+        <!-- <div class="row">
+            <ul>
+                <li *ngFor="let articulo of articulos |async ">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-title">
+                                {{articulo.title | uppercase }}
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            {{articulo.body}}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div> -->
     </div>
 </div>

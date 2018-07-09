@@ -12,6 +12,8 @@ import {AngularFirestoreModule} from "angularfire2/firestore"
 import { CrearElemento } from './elementos/crearElemento.component';
 import  {FormsModule} from "@angular/forms"
 import {HttpClientModule} from "@angular/common/http"
+import { ArticulosServices } from './services/articulos.services';
+import { ArticulosComponent } from './articulos/articulos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import {HttpClientModule} from "@angular/common/http"
     Home,
     Contacto,
     Elemento,
-    CrearElemento
+    CrearElemento,
+    ArticulosComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import {HttpClientModule} from "@angular/common/http"
 
 
   ],
-  providers: [PersonasServices],
+  providers: [PersonasServices, ArticulosServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

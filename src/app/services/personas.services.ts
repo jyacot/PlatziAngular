@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 
 export class PersonasServices{
     personas: Observable<any[]>;
-    URL_FAKE:string = "https://jsonplaceholder.typicode.com/posts";
+    URL_FAKE:string = "https://jsonplaceholder.typicode.com/users";
     constructor(private db:AngularFirestore, private ws:HttpClient){
         this.personas = db.collection("personas").valueChanges();
     };
