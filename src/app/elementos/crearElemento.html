@@ -18,8 +18,8 @@
             <button class="button" (click)="addPersona()">Guardar</button>
         </div>
         <div class="row">
-            Personas registradas: <b>{{personas.length}}</b>
+            Personas registradas:
+            <b>{{personas |json}}</b>
         </div>
-        <code>{{ personas | json }}</code>
     </div>
 </div>
